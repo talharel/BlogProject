@@ -82,7 +82,7 @@ def create(request):
     submit_text = 'Create' # Text for submit button, create or update
 
     if request.method == 'POST':
-        form = createBlogForm(request.user, request.POST, request.FILES) # request.user to check if user have blog
+        form = createBlogForm(request.user, request.POST, request.FILES) # request.user to check if user has blog
 
         if form.is_valid():
             form = form.save(commit=False)
@@ -105,7 +105,7 @@ def blog(request, pk):
     has_blog = Blog.objects.filter(user=request.user) # If user has blog
     if has_blog.count() > 0:
         user_blog = Blog.objects.get(user=request.user)
-        return render(request, 'blog.html', {'Blog': blog, 'id': user_blog.id, 'user': request.user})# If user has blog
+        return render(request, 'blog.html', {'Blog': blog, 'id': user_blog.id, 'user': request.user})
     else:
         return render(request,'blog.html',{'Blog':blog})
 
