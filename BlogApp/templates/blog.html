@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<div class="header">
+  <p class="nameAndTitle">Welcome to {{ Blog.user.username }}'s Blog</p>
+</div>
+
+<div class="blogImages">
+  <img src="{% static 'images/blogimage.png' %}" alt="My image">
+</div>
+
+<div class="blogImages">
+  <img src="{{ Blog.blog_picture.url }}" class="img-responsive img-circle margin"  alt="" width="350" height="350">
+</div>
+
+<div class="row">
+  <p class="nameAndTitle">{{ Blog.title }}</p>
+
+  <div class="leftcolumn">
+    <div class="card">
+      <h4>Date: {{ Blog.created_date }}</h4>
+      <p style="font-size:26px;">{{ Blog.content }}</p>
+    </div>
+  </div>
+
+  <div class="rightcolumn">
+
+    <div class="card">
+      <h2>About me</h2>
+      <p class="usernameAndEmail">Author: {{ Blog.user.username }}</p>
+      <p class="usernameAndEmail">Email: {{ Blog.user.email }}</p>
+    </div>
+
+<!--    <div class="card">-->
+<!--    </div>-->
+
+      {% if user == Blog.user %}
+        <div class="card">
+          <a href="{% url 'update' pk=id %}" class="button"><h2>Update Blog</h2></a>
+          <br>
+          <a href="{% url 'delete' pk=id %}" class="button"><h2>Delete Blog</h2></a>
+        </div>
+      {% endif %}
+  </div>
+</div>
+
+
+{% endblock %}

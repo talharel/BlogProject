@@ -1,0 +1,112 @@
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: #f1f1f1;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: #dae6e8;
+   padding: 20px;
+   margin-top: 20px;
+   border:solid #006100 4px;
+   border-radius: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
+.nameAndTitle{
+      font-size:60px;
+      color: #96a8b0;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+a.button{
+font-size:20px;
+width:250px;
+display:inline-block;
+padding:0.35em 1.2em;
+border:4px solid white;
+margin:0 0.3em 0.3em 0;
+border-radius:10px;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:black;
+text-align:center;
+transition: all 0.2s;
+}
+a.button:hover{
+color:#gray;
+background-color:#CAD1D8;
+}
+
+
+.blogImages
+{
+  display: flex;
+  justify-content: center;
+}
+
+.usernameAndEmail{
+    font-size:20px;
+}
+
+
+.row{
+    margin-top:100px;
+}
+
+
+#blogTitle{
+    font-size:100px;
+}
+

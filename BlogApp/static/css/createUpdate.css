@@ -1,0 +1,36 @@
+#submitButton{
+font-size:40px;
+width:240px;
+display:inline-block;
+padding:0.35em 1.2em;
+border:2px solid black;
+margin:0 0.3em 0.3em 0;
+border-radius:10px;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:green;
+text-align:center;
+transition: all 0.2s;
+}
+#submitButton:hover{
+color:#white;
+background-color:#CAD1D8;
+}
+
+
+.nameAndTitle{
+      font-size:60px;
+      color: #96a8b0;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#id_content{
+    width:1000px;
+}
+
+

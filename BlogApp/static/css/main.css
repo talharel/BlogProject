@@ -1,0 +1,41 @@
+.card-body{
+object-fit:fill;
+}
+
+
+img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  margin: 10px 0;
+}
+
+
+.card{
+  width: 400px;
+  height: 400px;
+}
+
+#blogsTitle{
+    font-size:200px;
+     text-align: center;
+}
+
+
+  .container-fluid {
+    padding: 60px 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

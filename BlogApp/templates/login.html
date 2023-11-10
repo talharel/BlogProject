@@ -1,0 +1,32 @@
+{% extends "baseLoginRegisterWelcome.html" %}
+{% load static %}
+
+
+{% block body_block %}
+
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
+
+<div class="titles">
+    <p id="title">Login</p>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{ userForm.as_p }}
+
+    <input id="submitBtn" type="submit" value="Login">
+
+    <br>
+    <br>
+    <!--  Incorrect message   -->
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+</form>
+
+{% endblock %}

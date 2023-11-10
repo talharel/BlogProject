@@ -1,0 +1,11 @@
+{% extends 'baseLoginRegisterWelcome.html' %}
+{% load static %}
+
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+<div class="titles">
+    <p id='title'>WELCOME TO BLOG WORLD</p>
+    <p id="second_title">JOIN US</p>
+</div>
+<a href="{% url 'login' %}" class="button">Login</a> <br> <a href="{% url 'registration' %}" class="button">Register</a>
+{% endblock %}
